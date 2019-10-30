@@ -1,5 +1,5 @@
 # The cultural prerequistes for WEIRD societies
-Data and code for the paper "The cultural prerequistes for WEIRD societies"
+Data code and intriuctions to reproduce the findings for the paper "The cultural prerequistes for WEIRD societies"
 
 ## directories
 data
