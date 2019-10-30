@@ -15,16 +15,15 @@ Louis Putterman ancestry data - https://www.brown.edu/Departments/Economics/Facu
 
 ## Derive Secular-Rationality and Cosmopolitanism from raw WEVS data 
 
-We provide file containing the combined World and European Values Survey data called "WEVS"; it contains the 64 common 
-cultural value questions, demogrophic infomrmation, the variables are standarized with missing values mean imputed.  Run 
-"ExtractRandC.R" to use weighted principal component analysis to extract Secular-Rationality (R) and Cosmopolitanism (C) 
-from WEVS data.    
+We provide a file containing the combined World and European Values Survey data called "WEVS"; it contains the 64 common 
+cultural value questions, demogrophic infomrmation. The variables are standarized with missing values mean imputed.  Run 
+"ExtractRandC.R" to use weighted principal component analysis to extract the Secular-Rationality (R) and Cosmopolitanism (C)
+measures from WEVS data.    
 
-## Show that birth decade differneces are independent of time period using k-fold cross-validation
+## Show that birth decade differences are independent of time period using model comparison
 
-Run "seperateBirthdecadeAndTimeperiod.py" to create birthDecade-timePeriod matrices for all nations for both 
-Secular-Rationalism and Cosmopolitanism. Then run "kfoldModelComparison.R" which compares hierachical linear regressions 
-of increasing complexity to show that assuming birthDecade-timePeriod independence is reasonable.
+Run "splitSampesByBirthdecadeAndTimeperiod.py" to split the represnaive samples for each nation by birth decade and time period for both Secular-Rationalism and Cosmopolitanism. Then "createDataframeForkfold.py" converts all the nation matrices into a dataframe to be used in the model comparison. Then run "kfoldModelComparison.R" which compares hierachical linear
+regressions of increasing complexity, showing that birth decade differneces are indepdent of time period.
 
 ## create birth decade time series
 
