@@ -16,19 +16,19 @@ Louis Putterman ancestry data - https://www.brown.edu/Departments/Economics/Facu
 ## Derive Secular-Rationality and Cosmopolitanism from raw WEVS data 
 
 We provide a file containing the combined World and European Values Survey data called "WEVS"; it contains the 64 common 
-cultural value questions, demogrophic infomrmation. The variables are standarized with missing values mean imputed.  Run 
+cultural value questions, demogrophic infomrmation and the variables are standarized with missing values mean imputed.  Run 
 "ExtractRandC.R" to use weighted principal component analysis to extract the Secular-Rationality (R) and Cosmopolitanism (C)
 measures from WEVS data.    
 
 ## Show that birth decade differences are independent of time period using model comparison
 
 Run "splitSampesByBirthdecadeAndTimeperiod.py" to split the represnaive samples for each nation by birth decade and time period for both Secular-Rationalism and Cosmopolitanism. Then "createDataframeForkfold.py" converts all the nation matrices into a dataframe to be used in the model comparison. Then run "kfoldModelComparison.R" which compares hierachical linear
-regressions of increasing complexity, showing that birth decade differneces are indepdent of time period.
+regressions of increasing complexity, testing whether birth decade differneces are indepdent of time period.
 
 ## create birth decade time series
 
-By running "makeBirthDecadeTrends.py" we average each birth cohort over all time periods (using linear imputation to avoid 
-period change bias). This creates normalized birth decade time series files for Secular-Rationalism and Cosmopolitanism.
+Running "makeBirthDecadeTrends.py"  averages each birth cohort over all time periods (using linear imputation to avoid 
+period effect bias). This creates birth decade time series files for Secular-Rationalism and Cosmopolitanism.
 
 ## run hierachical time-lagged regression
 
@@ -42,7 +42,7 @@ Run "plotRegressionResults.py" to recreate figure 1
 
 ## Figure 3 and analysis for langauge category and cultural values
 
-For this section, you will need to download Louis Puttermans data for the ancestral national origins of modern populations 
+For this section, you will need to download Louis Puttermans data for the ancestral origins of modern national populations 
 
 We include a file in folder "figure3Data" called "cos_rat.csv", which contains the time averaged Secular-Rationalism and 
 Cosmopolitanism for all nations. Running "createLanagugedf.py" builds the dataframe for cultural values and langauge category 
