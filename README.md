@@ -15,10 +15,8 @@ Louis Putterman ancestry data - https://www.brown.edu/Departments/Economics/Facu
 
 ## Derive Secular-Rationality and Cosmopolitanism from raw WEVS data 
 
-We provide a file containing the combined World and European Values Survey data called "WEVS"; it contains the 64 common 
-cultural value questions, demogrophic infomrmation and the variables are standarized with missing values mean imputed.  Run 
-"ExtractRandC.R" to use weighted principal component analysis to extract the Secular-Rationality (R) and Cosmopolitanism (C)
-measures from WEVS data.    
+We provide a file containing the combined World and European Values Survey data called "WEVS"; it contains the 68 common 
+cultural value questions sicen 1990, demographic infomrmation and the variables are standarized with missing values mean imputed.  Run "ExtractRandC.R" to use weighted principal component analysis to extract the Secular-Rationality (R) and Cosmopolitanism (C) measures from WEVS data.    
 
 ## Show that birth decade differences are independent of time period using model comparison
 
@@ -28,17 +26,19 @@ regressions of increasing complexity, testing whether birth decade differneces a
 ## create birth decade time series
 
 Running "makeBirthDecadeTrends.py"  averages each birth cohort over all time periods (using linear imputation to avoid 
-period effect bias). This creates birth decade time series files for Secular-Rationalism and Cosmopolitanism.
+period effect bias, but quadratic imputation is also possible). This creates birth decade time series files for Secular-Rationalism and Cosmopolitanism.
 
 ## run hierachical time-lagged regression
 
-Compare the derived birth decade time series for Secular-Rationlism (RAT) and Cosmopolitanism (COS), with societal varables 
+Compare the derived birth decade time series for Secular-Rationlism (RAT), Cosmopolitanism (COS)
 Education (EDS), Life Expectency (LEX), Democracy (DEM) and GDP per capita (GDP) (provided in the folder 
 "time_series_normalized"). Run the file "runRegressions.R" to fit and save results.
 
+Changing the "adultAge" parameter runs regressions assuming an adult age of either 0-10, 10-20 or 20-30 years.  
+
 ## plot figure 1 (regression results) 
 
-Run "plotRegressionResults.py" to recreate figure 1
+Run "plotRegressionResults.py" to recreate figure 1.  
 
 ## Figure 3 and analysis for langauge category and cultural values
 
