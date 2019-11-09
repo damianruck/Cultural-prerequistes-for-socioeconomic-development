@@ -1,9 +1,13 @@
-# The cultural prerequistes for WEIRD societies
-Data code and intriuctions to reproduce the findings for the paper "The cultural prerequistes for WEIRD societies"
+# Cultural prerequistes of prosperous societies
+Data code and intriuctions to reproduce the findings for the paper "Cultural prerequistes of prosperous societies"
+
+please cite:
 
 ## directories
 data
+
 R
+
 python
 
 ## Get raw data
@@ -38,13 +42,9 @@ Run "plotRegressionResults.py" to recreate figure 1.
 For this section, you will need to download Louis Puttermans data for the ancestral origins of modern national populations 
 
 We include a file in folder "figure3Data" called "cos_rat.csv", which contains the time averaged Secular-Rationalism and 
-Cosmopolitanism for all nations. Running "createLanagugedf.py" builds the dataframe for cultural values and langauge category 
-comparisons. Running "lanagugeCategoryRegression.R" runs the linear regression for measuring the effects of slavic, italic 
-and germainic languages on cosmopolitanism + secular-rationalism. Then, to produce figure 3, first run "createWorldmap.R" to 
-produce figure 3 and then "createFigure3bc.py" to produce figure3b and 3c.
+Cosmopolitanism for all nations. Running "createLanagugedf.py" builds the dataframe containing cultural value scores and percent of popluation descended from nations within the Germanic, Italic and Slavic lamgauge families. Running "LanguageCategoryRegression.R" runs the linear regression for measuring the effect of having Slavic, Italic and Germainic speaking ancenstry on compisite cultural values, cosmopolitanism + secular-rationalism. Then, to produce figure 3, first run "createWorldmap.R" to produce figure 3a and then "createFigure3bc.py" to produce figure3b and 3c.
 
 
-## Will you add another figure?
 
 
 
