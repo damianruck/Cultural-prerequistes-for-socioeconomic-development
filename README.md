@@ -3,7 +3,7 @@ Data code and instructions to reproduce the findings for the paper "Cultural pre
 
 please cite:
 
-## directories
+## Directories
 data - contains, lookup for WEVS country codes
 
 R - contains all R scripts
@@ -23,7 +23,7 @@ World Values Survey http://www.worldvaluessurvey.org/WVSContents.jsp
 
 Louis Putterman ancestry data - https://www.brown.edu/Departments/Economics/Faculty/Louis_Putterman/world%20migration%20matrix.htm
 
-## Derive Secular-Rationality and Cosmopolitanism from raw WEVS data 
+## Secular-Rationality and Cosmopolitanism using EFA and PCA 
 
 For this section you must download the raw World and European Values Survey data. You should use the 68 cultural value questions that have been asked in all WEVS editions since 1990. The WEVS also contains demographic information such as nation. time period and birth date.
 
@@ -34,17 +34,17 @@ Run "ExtractRandC.R" to use weighted principal component analysis to extract the
 Run "splitSampesByBirthdecadeAndTimeperiod.py" to split the represnaive samples for each nation by birth decade and time period for both Secular-Rationalism and Cosmopolitanism. Then "createDataframeForkfold.py" converts all the nation matrices into a dataframe to be used in the model comparison. Then run "kfoldModelComparison.R" which compares hierachical linear
 regressions of increasing complexity, testing whether birth decade differneces are indepdent of time period. Then run "plotKfoldPerformance.py" to plot these results for the supplimentary materials. 
 
-## run hierachical time-lagged regression
+## Run hierachical time-lagged regression
 
 Compare the derived birth decade time series for Secular-Rationlism (RAT), Cosmopolitanism (COS), Education (EDS), Life Expectency (LEX), Democracy (DEM) and GDP per capita (GDP) (provided in the folder "time_series_normalized"). Run the file "runTimeLaggedRegressions.R" to fit and save results.
 
 Changing the "adultAge" parameter runs regressions assuming an adult age of either 0-10, 10-20 or 20-30 years.  
 
-## plot figure 1 (regression results) 
+## Plot figure 1 (multilevel time-lagged regression results) 
 
 Run "plotRegressionResults.py" to recreate figure 1.  
 
-## Figure 3 and analysis for langauge category and cultural values
+## Plot Figure 3 (Origins of Secular-Rationality and Cosmopolitanism)
 
 For this section, you will need to download Louis Puttermans data for the ancestral origins of modern national populations 
 
