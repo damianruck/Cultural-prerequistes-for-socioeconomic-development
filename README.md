@@ -4,17 +4,17 @@ Data code and instructions to reproduce the findings for the paper "Cultural pre
 please cite:
 
 ## Directories
-data - contains, lookup for WEVS country codes
+**data** - contains, lookup for WEVS country codes
 
-R - contains all R scripts
+**R** - contains all R scripts
 
-python - contains all Python scriprs
+**python** - contains all Python scriprs
 
-timeSeriesForRegression - time series for multi-level time lagged linear regression
+**timeSeriesForRegression** - time series for multi-level time lagged linear regression
 
-figure3Data - contains time averaged Cosmopolitanism and Secular-Rationality data to produce Figure 3.
+**figure3Data** - contains time averaged Cosmopolitanism and Secular-Rationality data to produce Figure 3.
 
-random_effects – Language category assignments for all nations
+**random_effects** – Language category assignments for all nations
 
 ## Get raw data
 European Values Survey https://www.gesis.org/en/services/data-analysis/international-survey-programs/european-values-study/
